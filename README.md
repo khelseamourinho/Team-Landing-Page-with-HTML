@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>KEEP Team</h1>
-  <h1>Khelsea & EEP TEAM</h1>
+  <h1>Team Landing Page with HTML</h1>
+  <h1></h1>
   <h4>TUGAS MEMBUAT WEBSITE DENGAN 3 FILE HTML</h4>
   <h4>guna memenuhi tugas pada mata kuliah Pemrograman Web</h4>
   <p>dosen pengampu : Yulian Ansori, S.Kom, M.Kom</p>

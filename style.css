@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a1128;
+    color: white;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(10, 17, 40, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #1e2a4a;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ff8c42;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-links a {
+    color: #b8c1d9;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+    background-color: #ff8c42;
+}
+
+.section-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.section-links a {
+    color: #b8c1d9;
+    text-decoration: none;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.section-links a:hover,
+.section-links a.active {
+    color: white;
+    background-color: #ff8c42;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 2rem 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 2rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: #16213e;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ff8c42;
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card .role {
+    color: #ff8c42;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.section {
+    padding: 3rem 2rem;
+    min-height: 100vh;
+}
+
+.section-alt {
+    background-color: #16213e;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ff8c42;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.role {
+    color: #ff8c42;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.desc {
+    color: #b8c1d9;
+    max-width: 700px;
+    font-size: 1rem;
+}
+
+.skills-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.skill-label {
+    width: 120px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-track {
+    flex: 1;
+    background-color: #1e2a4a;
+    height: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background-color: #ff8c42;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-weight: bold;
+    color: #0a1128;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 120px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .section-links {
+        order: 4;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .skill-label {
+        width: 100px;
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        padding: 2rem 1rem 0;
+    }
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+@media (max-width: 767px) {
+    .grid-layout {
+        grid-template-areas: 
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+}
+
+.header-area {
+    grid-area: header;
+}
+
+.sidebar-area {
+    grid-area: sidebar;
+}
+
+.main-area {
+    grid-area: main;
+}
+
+.footer-area {
+    grid-area: footer;
+}
